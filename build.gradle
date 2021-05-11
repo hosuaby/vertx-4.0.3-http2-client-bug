@@ -6,10 +6,13 @@ repositories {
     mavenCentral()
 }
 
+def VERTX_VERSION = System.getProperty('VERTX_VERSION') ?: '4.0.3'
+
 dependencies {
-    testCompile group: 'io.vertx', name: 'vertx-core', version: '4.0.3'
-    testCompile group: 'io.vertx', name: 'vertx-web-client', version: '4.0.3'
-    testCompile group: 'io.vertx', name: 'vertx-junit5', version: '4.0.3'
+    testCompile group: 'io.vertx', name: 'vertx-core', version: VERTX_VERSION
+    testCompile group: 'io.vertx', name: 'vertx-web-client', version: VERTX_VERSION
+    testCompile group: 'io.vertx', name: 'vertx-junit5', version: VERTX_VERSION
+
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.7.1'
     testCompile group: 'com.github.tomakehurst', name: 'wiremock-jre8', version: '2.27.2'
 
